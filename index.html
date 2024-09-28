@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- SWIPER JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- GSAP  CDN -->
+  </head>
+  <body>
+    <main>
+      <!-- HEADER -->
+      <header class="header">
+        <div class="header-content">
+          <div class="header-left">
+            <div class="header-links">
+              <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+              <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="header-right">
+            <div class="mail">
+              <a href=""><i class="fa-regular fa-envelope"></i></a>
+              <p>abc@gmail.com</p>
+            </div>
+            <div class="phone">
+              <a href=""><i class="fa-solid fa-phone"></i></a>
+              <p>0123 456 789</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER -->
+
+      <!-- NAVBAR -->
+
+      <nav class="navbar">
+        <div class="content">
+          <div class="logo">
+            <a href=""><img src="imgs/logo.png" alt="" /></a>
+          </div>
+          <ul class="toggle-menu">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Portfolio</a></li>
+            <li><a href="">Contact Us</a></li>
+          </ul>
+
+          <div class="toggle-btn">
+            <i id="toggleIcon" class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- HOME SLIDER -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="imgs/genz-newheader-01.png" alt="" />
+            <div class="slide-text">
+              <h1>Effective Digital Campaigns That Drive More Sales</h1>
+              <p>Creating Visual representations...</p>
+              <button class="slide-text-btn">Get Estimate</button>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img src="imgs/genz-newheader-02.png" alt="" />
+            <div class="slide-text">
+              <h1>More Effective Digital Campaigns</h1>
+              <p>Creating Visual representations...</p>
+              <button class="slide-text-btn">Get Estimate</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next swiper-buttons"></div>
+        <div class="swiper-button-prev swiper-buttons"></div>
+      </div>
+      <!-- HOME SLIDER -->
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <img src="imgs/GEN-z-3D-box.png" alt="" class="about-bg" />
+        <div class="about-content">
+          <div class="about-left">
+            <h4>Get To Know Us</h4>
+            <h1>Make Every Design <span>Stand Out</span></h1>
+            <p>
+              GenZ, a leading advertising firm, stands at the forefront of
+              innovative branding solutions. With more than 10+ years of
+              industry experience, we provide a wide range of services to major
+              brands across diverse sectors. Our expertise spans the full
+              spectrum of indoor and outdoor advertising, addressing the dynamic
+              needs of our clients with effective, results-oriented branding
+              strategies.
+            </p>
+          </div>
+          <div class="about-right">
+            <img src="imgs/Get-To-Know-Us.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <!-- ABOUT -->
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="animate.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
