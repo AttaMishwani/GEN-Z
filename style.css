@@ -12,10 +12,6 @@
   --bg-color: #ffffff;
 }
 
-body {
-  min-height: 1000vh;
-}
-
 a {
   text-decoration: none;
 }
@@ -24,6 +20,9 @@ li {
   list-style: none;
 }
 
+body {
+  height: 500vh;
+}
 /* HEADER */
 .header {
   background-color: var(--orange-color);
@@ -230,15 +229,15 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-8rem);
+  transform: translateY(-8.5rem);
   overflow-y: visible;
-  z-index: 9999;
+  z-index: 99;
 }
 
 .about .about-bg {
   position: absolute;
   left: -260px;
-  bottom: -80px;
+  bottom: -180px;
 }
 
 .about .about-content {
@@ -253,6 +252,7 @@ li {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  padding-top: 5.5rem;
 }
 
 .about-content .about-left h4 {
@@ -280,12 +280,211 @@ li {
 }
 .about .about-content .about-right {
   width: 50%;
+  z-index: 999;
 }
 
 .about .about-content .about-right img {
   width: 100%;
 }
 
+/* CARD */
+
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper i {
+  height: 50px;
+  width: 50px;
+  background: var(--orange-color);
+  color: white;
+  border: 2px solid white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 61%;
+  font-size: 1.25 rem;
+  transform: translateY(-50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.wrapper i:first-child {
+  left: -22px;
+}
+
+.wrapper i:last-child {
+  right: -5px;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: 0;
+  margin-top: 2rem;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 380px;
+  border-radius: 15px;
+  /* overflow: hidden; */
+  list-style: none;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  cursor: pointer;
+  width: 98%;
+  padding-bottom: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.carousel .card img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #fff;
+}
+
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+
+.carousel .card span {
+  color: #6a6d78;
+  font-size: 1.31rem;
+}
+
+.section-heading {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  display: block;
+  margin: 2rem auto;
+}
+
+.section-heading::after {
+  z-index: -1;
+  content: "3D Services";
+  font-size: 80px;
+  width: 100%;
+  color: #f79f90;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+}
+
+.section-heading::before {
+  z-index: -1;
+  content: "3D Services";
+  font-size: 80px;
+  width: 100%;
+  color: var(--orange-color);
+  position: absolute;
+  top: -6px;
+  left: 4px;
+}
+
+.cards-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cards-inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 3rem auto 2rem auto;
+  align-items: center;
+}
+
+.cards-inner-container .card {
+  width: 290px;
+  height: 374px;
+  margin: 10px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cards-container .cards-heading {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  display: block;
+  margin: 2rem auto;
+}
+
+.cards-container .cards-heading::after {
+  z-index: -1;
+  content: "2D Services";
+  font-size: 80px;
+  width: 100%;
+  color: #f79f90;
+  position: absolute;
+  top: -2px;
+  left: 2px;
+}
+
+.cards-container .cards-heading::before {
+  z-index: -1;
+  content: "2D Services";
+  font-size: 80px;
+  width: 100%;
+  color: var(--orange-color);
+  position: absolute;
+  top: -6px;
+  left: 4px;
+}
+
+/* .cards-inner-container .card img {
+  object-fit: contain;
+} */
 /* MEDIA QUERIES */
 @media (max-width: 1300px) {
   .header-content {
@@ -357,6 +556,23 @@ li {
   .slide-text {
     width: 53vw;
   }
+  .about .about-content {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .about .about-content .about-left {
+    width: 100%;
+
+    padding-top: 5.5rem;
+  }
+  .about .about-content .about-right {
+    width: 100%;
+  }
+  .about .about-bg {
+    width: 250px;
+    left: -176px;
+  }
 }
 
 @media (max-width: 570px) {
@@ -390,5 +606,22 @@ li {
   .slide-text button {
     font-size: 16px;
     padding: 5px 13px;
+  }
+
+  .about .about-bg {
+    width: 215px;
+    left: -135px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
   }
 }
