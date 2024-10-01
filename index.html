@@ -80,8 +80,8 @@
 
       <!-- HOME SLIDER -->
       <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
+      <div class="swiper home-swiper mySwiper">
+        <div class="home-swiper-wrapper swiper-wrapper">
           <div class="swiper-slide">
             <img src="imgs/genz-newheader-01.png" alt="" />
             <div class="slide-text">
@@ -131,6 +131,7 @@
             </div>
           </div>
         </div>
+
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
@@ -162,87 +163,35 @@
       <!-- ABOUT -->
 
       <!-- CARD SLIDER -->
-      <div class="wrapper">
-        <h1 class="section-heading">3D Services</h1>
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide">
+              <img src="imgs/Exhibition-design.jpg" alt="" />
+            </div>
 
-        <i id="left" class="fa-solid fas fa-angle-left"></i>
-        <ul class="carousel">
-          <li class="card">
-            <img src="imgs/Exhibition-design.jpg" alt="" draggable="false" />
-            <div class="card-overlay">
-              <div class="overlay-content">
-                <h2>Web Development</h2>
-                <p>
-                  Web development creates functional websites using coding
-                  languages and tools.
-                </p>
-                <button>View More</button>
-              </div>
+            <div class="card swiper-slide">
+              <img src="imgs/Exhibition-design.jpg" alt="" />
             </div>
-          </li>
-          <li class="card">
-            <img
-              src="imgs/Mall-activities-design.jpg"
-              alt=""
-              draggable="false"
-            />
-            <div class="card-overlay">
-              <div class="overlay-content">
-                <h2>Web Development</h2>
-                <p>
-                  Web development creates functional websites using coding
-                  languages and tools.
-                </p>
-                <button>View More</button>
-              </div>
+
+            <div class="card swiper-slide">
+              <img src="imgs/Exhibition-design.jpg" alt="" />
             </div>
-          </li>
-          <li class="card">
-            <img
-              src="imgs/Outdoor-activities-design.jpg"
-              alt=""
-              draggable="false"
-            />
-            <div class="card-overlay">
-              <div class="overlay-content">
-                <h2>Web Development</h2>
-                <p>
-                  Web development creates functional websites using coding
-                  languages and tools.
-                </p>
-                <button>View More</button>
-              </div>
+
+            <div class="card swiper-slide">
+              <img src="imgs/Exhibition-design.jpg" alt="" />
             </div>
-          </li>
-          <li class="card">
-            <img src="imgs/posm02.jpg" alt="" draggable="false" />
-            <div class="card-overlay">
-              <div class="overlay-content">
-                <h2>Web Development</h2>
-                <p>
-                  Web development creates functional websites using coding
-                  languages and tools.
-                </p>
-                <button>View More</button>
-              </div>
+
+            <div class="card swiper-slide">
+              <img src="imgs/Exhibition-design.jpg" alt="" />
             </div>
-          </li>
-          <li class="card">
-            <img src="imgs/posm02.jpg" alt="" draggable="false" />
-            <div class="card-overlay">
-              <div class="overlay-content">
-                <h2>Web Development</h2>
-                <p>
-                  Web development creates functional websites using coding
-                  languages and tools.
-                </p>
-                <button>View More</button>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <i id="right" class="fa-solid fas fa-angle-right"></i>
+          </div>
+        </div>
+
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
       </div>
+
       <!-- CARD SLIDER -->
 
       <!-- ANIMATED CARDS -->
@@ -445,6 +394,7 @@
     <script src="animate.js"></script>
     <script src="script.js"></script>
     <script src="ContactSwiper.js"></script>
+    <script src="cardSlider.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   </body>

@@ -10,6 +10,7 @@
 :root {
   --orange-color: #f15023;
   --bg-color: #ffffff;
+  --section-color: #ffffff;
   --transition-two: 0.2s ease;
 }
 
@@ -32,7 +33,9 @@ body {
 /* HEADER */
 .header {
   background-color: var(--orange-color);
-  width: 100%;
+  width: 1300px;
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,6 +45,7 @@ body {
 .header-content {
   display: flex;
   width: 78%;
+  max-width: 1300px;
   justify-content: space-between;
 }
 
@@ -109,19 +113,21 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 1300px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .navbar .content {
   background-image: url(imgs/header-1.png);
-  background-size: 85vw 12vh;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 5px 209px;
+  padding: 5px 142px;
   z-index: 9999;
 }
 
@@ -153,14 +159,15 @@ body {
 }
 
 /* HOME */
-.swiper {
+.home-swiper {
   width: 100%;
+
   height: 97vh;
   transform: translateY(-3.69rem);
   background-color: #4c7db4;
 }
 
-.swiper-slide {
+.home-swiper .swiper-slide {
   /* text-align: center; */
   font-size: 18px;
   background: #fff;
@@ -170,7 +177,7 @@ body {
   position: relative;
 }
 
-.swiper-slide img {
+.home-swiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -229,8 +236,10 @@ body {
 
 /* ABOUT */
 .about {
-  width: 100%;
-  /* background-color: var(--bg-color); */
+  width: 1550px;
+  max-width: 1550px;
+  margin: 0 auto;
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -294,158 +303,83 @@ body {
 }
 
 /* CARD */
-
-.wrapper {
-  max-width: 1100px;
+.slide-container {
+  max-width: 1300px;
   width: 100%;
-  margin: 0 auto;
-  position: relative;
+  padding: 40px 0;
 }
-
-.wrapper i {
-  height: 50px;
-  width: 50px;
-  background: var(--orange-color);
-  color: white;
-  border: 2px solid white;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: absolute;
-  top: 61%;
-  font-size: 1.25 rem;
-  transform: translateY(-50%);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-  z-index: 999;
+.slide-container .slide-content {
+  margin: 0 20px;
+  overflow: hidden;
 }
-
-.wrapper i:first-child {
-  left: -22px;
-}
-
-.wrapper i:last-child {
-  right: -5px;
-}
-
-.wrapper .carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scrollbar-width: 0;
-  margin-top: 2rem;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel :where(.card, .img) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-
-.carousel.no-transition {
-  scroll-behavior: auto;
-}
-
-.carousel.dragging .card {
-  cursor: grab;
-  user-select: none;
-}
-
-.carousel .card {
-  scroll-snap-align: start;
-  height: 380px;
+.card-wrapper .card {
+  border-radius: 25px;
+  /* background-color: #fff; */
+  height: 350px !important;
+  width: 293px !important;
   border-radius: 15px;
-  list-style: none;
-  border-radius: 8px;
+  overflow: hidden;
+}
+/* .card-wrapper .image-content,
+.card-content {
   display: flex;
-  cursor: pointer;
-  width: 98%;
-  padding-bottom: 15px;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  position: relative;
-}
+  align-items: center;
+  padding: 10px 14px;
+} */
 
-.carousel .card .card-overlay {
-  position: absolute;
-  width: calc(100% - 35px);
-  height: calc(100% - 22px);
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px 10px 20px 10px;
-  z-index: 99;
-  top: 4px;
-  border-radius: 20px;
-  opacity: 0;
-  left: 17px;
-  transition: all 0.2s ease;
-}
-.carousel .card .card-overlay .overlay-content {
-  width: 100%;
+.card-wrapper .card img {
+  /* width: 100%; */
   height: 100%;
-  padding: 30px 10px 10px 10px;
-  border: 2px solid white;
-  border-radius: 10px;
-  color: white;
-}
-.carousel .card .card-overlay .overlay-content h2 {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 20px;
 }
 
-.carousel .card .card-overlay .overlay-content p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 27px;
-  margin-bottom: 20px;
+.slide-container .swiper-navBtn {
+  color: #000000;
+  transition: color 0.3s ease;
 }
-
-.carousel .card .card-overlay .overlay-content button {
-  font-size: 16px;
-  font-weight: 500;
+.slide-container .swiper-navBtn:hover {
+  color: #000000;
+}
+.slide-container .swiper-navBtn::before,
+.slide-container .swiper-navBtn::after {
+  font-size: 35px;
+}
+.slide-container .swiper-button-next {
+  right: 25px;
   background-color: var(--orange-color);
-  border-radius: 15px;
-  padding: 8px 15px;
-  border: none;
-  color: white;
-  outline: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+}
+.slide-container .swiper-button-prev {
+  left: 0;
+  background-color: var(--orange-color);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
 }
 
-.carousel .card:hover .card-overlay {
-  opacity: 1;
+.slide-container .swiper-button-next:after,
+.slide-container .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: 20px !important;
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 3;
+  color: white !important;
 }
 
-.carousel .card img {
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 4px solid #fff;
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
 }
 
-.carousel .card h2 {
-  font-weight: 500;
-  font-size: 1.56rem;
-  margin: 30px 0 5px;
-}
-
-.carousel .card span {
-  color: #6a6d78;
-  font-size: 1.31rem;
-}
+/* CARD */
 
 .section-heading {
   font-size: 80px;
@@ -590,8 +524,10 @@ body {
 
 /* CONTACT */
 .contact {
-  width: 100%;
+  width: 1300px;
+  max-width: 1300px;
   margin-top: 15vh;
+  margin: 5vh auto 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -776,6 +712,7 @@ body {
 /* FOOTER */
 .footer {
   width: 100%;
+  margin: 0 auto;
   background-image: url(imgs/footer-bk.png);
   background-size: cover;
   background-position: center;
@@ -786,7 +723,7 @@ body {
   flex-direction: column;
   transition: 0.2s ease;
   position: relative;
-  margin-top: 15rem;
+  /* margin-top: 15rem; */
 }
 
 .footer-bk {
@@ -1076,6 +1013,10 @@ body {
   .about .about-bg {
     width: 250px;
     left: -176px;
+  }
+
+  .slide-content {
+    margin: 0 10px;
   }
 
   .contact {
