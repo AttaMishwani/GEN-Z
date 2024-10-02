@@ -32,7 +32,7 @@
   <body>
     <main>
       <!-- HEADER -->
-      <header class="header">
+      <header id="home" class="header">
         <div class="header-content">
           <div class="header-left">
             <div class="header-links">
@@ -64,11 +64,11 @@
             <a href=""><img src="imgs/logo.png" alt="" /></a>
           </div>
           <ul class="toggle-menu">
-            <li><a href="" class="active">Home</a></li>
-            <li><a href="">About</a></li>
-            <li><a href="">Services</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#threeDServices">Services</a></li>
             <li><a href="">Portfolio</a></li>
-            <li><a href="">Contact Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
 
           <div class="toggle-btn">
@@ -163,27 +163,78 @@
       <!-- ABOUT -->
 
       <!-- CARD SLIDER -->
-      <div class="slide-container swiper">
+      <div id="threeDServices" class="slide-container swiper">
+        <h1 class="slide-heading">3D Services</h1>
         <div class="slide-content">
           <div class="card-wrapper swiper-wrapper">
             <div class="card swiper-slide">
               <img src="imgs/Exhibition-design.jpg" alt="" />
+              <div class="td-card-overlay">
+                <div class="td-content">
+                  <h2>Web Development</h2>
+                  <p>
+                    Web development creates functional websites using coding
+                    languages and tools.
+                  </p>
+                  <button>View More</button>
+                </div>
+              </div>
             </div>
 
             <div class="card swiper-slide">
               <img src="imgs/Mall-activities-design.jpg" alt="" />
+              <div class="td-card-overlay">
+                <div class="td-content">
+                  <h2>Web Development</h2>
+                  <p>
+                    Web development creates functional websites using coding
+                    languages and tools.
+                  </p>
+                  <button>View More</button>
+                </div>
+              </div>
             </div>
 
             <div class="card swiper-slide">
               <img src="imgs/Outdoor-activities-design.jpg" alt="" />
+              <div class="td-card-overlay">
+                <div class="td-content">
+                  <h2>Web Development</h2>
+                  <p>
+                    Web development creates functional websites using coding
+                    languages and tools.
+                  </p>
+                  <button>View More</button>
+                </div>
+              </div>
             </div>
 
             <div class="card swiper-slide">
               <img src="imgs/Exhibition-design.jpg" alt="" />
+              <div class="td-card-overlay">
+                <div class="td-content">
+                  <h2>Web Development</h2>
+                  <p>
+                    Web development creates functional websites using coding
+                    languages and tools.
+                  </p>
+                  <button>View More</button>
+                </div>
+              </div>
             </div>
 
             <div class="card swiper-slide">
               <img src="imgs/Exhibition-design.jpg" alt="" />
+              <div class="td-card-overlay">
+                <div class="td-content">
+                  <h2>Web Development</h2>
+                  <p>
+                    Web development creates functional websites using coding
+                    languages and tools.
+                  </p>
+                  <button>View More</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -258,7 +309,8 @@
       <!-- ANIMATED CARDS -->
 
       <!-- CONTACT -->
-      <section class="contact">
+      <section id="contact" class="contact">
+        <img src="imgs/footer-3D-boxes-copy.png" alt="" class="contact-bg" />
         <div class="content-left clients-container">
           <h1 class="contact-heading">
             Clients <br />

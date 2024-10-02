@@ -44,6 +44,36 @@ gsap.from(".swiper-slide-active .slide-text", {
 let cards = document.querySelectorAll(".card .card-overlay");
 
 cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    // Animation for h2
+    gsap.from(card.querySelector("h2"), {
+      y: 50,
+      opacity: 0, // Make sure opacity starts from 0
+      duration: 1.5,
+      ease: "power2.out",
+    });
+
+    // Animation for p
+    gsap.from(card.querySelector("p"), {
+      y: 150,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+    });
+
+    // Animation for button
+    gsap.from(card.querySelector("button"), {
+      y: 100,
+      opacity: 0,
+      duration: 1.4,
+      ease: "power2.out",
+    });
+  });
+});
+
+let tdCards = document.querySelectorAll(" .td-card-overlay");
+
+tdCards.forEach((card) => {
   console.log(card);
   card.addEventListener("mouseenter", () => {
     // Animation for h2
