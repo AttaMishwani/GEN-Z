@@ -970,12 +970,11 @@ body {
   }
 
   .navbar .content {
-    background-size: 118vw 12vh;
+    background-size: cover;
     width: 100%;
-    padding: 13px 29px;
+    padding: 5px 29px;
     z-index: 9999;
   }
-
   .toggle-btn {
     display: block;
     background-color: var(--orange-color);
@@ -998,7 +997,7 @@ body {
   }
 
   .toggle-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -350px;
     width: 350px;
@@ -1007,6 +1006,7 @@ body {
     background-color: #252525;
     height: 100vh;
     flex-direction: column;
+    z-index: 999;
     padding-top: 2rem;
     border: 1px solid rgb(15, 15, 15);
     transition: 0.2s ease;
@@ -1239,9 +1239,11 @@ body {
   /* .swiper {
     height: fit-content;
   } */
-
+  .about-content .about-left h1 {
+    font-size: 43px;
+  }
   .slide-text {
-    width: 95vw;
+    width: 90vw;
   }
   .slide-text p {
     font-size: 13px;

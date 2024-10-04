@@ -74,7 +74,6 @@ cards.forEach((card) => {
 let tdCards = document.querySelectorAll(" .td-card-overlay");
 
 tdCards.forEach((card) => {
-  console.log(card);
   card.addEventListener("mouseenter", () => {
     // Animation for h2
     gsap.from(card.querySelector("h2"), {
